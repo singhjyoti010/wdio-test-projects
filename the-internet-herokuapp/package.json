@@ -9,6 +9,6 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.js",
-    "test" : "npx wdio run ./wdio.conf.js"
+    "test": "npx wdio run ./wdio.conf.js"
   }
 }
