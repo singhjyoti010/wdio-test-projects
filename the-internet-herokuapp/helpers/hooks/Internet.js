@@ -35,3 +35,12 @@ export const KeyPress = {
         return $(".example input");
     }
 }
+
+export const multiWindow = {
+    get newWindowBtn() {
+        return $(".example a");
+    },
+    get newWindowTitle() {
+        return $('h3');
+    }
+}
