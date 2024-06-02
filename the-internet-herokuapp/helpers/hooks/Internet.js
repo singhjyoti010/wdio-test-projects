@@ -80,3 +80,18 @@ export const DropDownHooks = {
         return $(`[value='${value}']`)
     }
 }
+
+export const Alerts = {
+    get simpleAlert() {
+        return $("button*=Alert");
+    },
+    get confirmAlert() {
+        return $('button*=Confirm');
+    },
+    get promptAlert() {
+        return $("button*=Prompt");
+    },
+    get result() {
+        return $('#result');
+    }
+}
