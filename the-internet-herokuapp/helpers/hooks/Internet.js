@@ -71,3 +71,12 @@ export const DragDropHooks = {
         return $("#columns div:nth-child(2) header");
     },
 }
+
+export const DropDownHooks = {
+    get dropdownList () {
+        return $('#dropdown');
+    },
+    option(value) {
+        return $(`[value='${value}']`)
+    }
+}
