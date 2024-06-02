@@ -44,3 +44,30 @@ export const multiWindow = {
         return $('h3');
     }
 }
+
+export const Frames = {
+    get iFrameLi() {
+        return $(".=iFrame");
+    },
+    get frameHeading() {
+        return $('.example h3');
+    },
+    get textAreaFrame() {
+        return $('#mce_0_ifr');
+    },
+    get iframeBody() {
+        return $('#tinymce');
+    }
+}
+
+export const DragDropHooks = {
+    get boxA() {
+        return $("//header[contains(text(),'A')]/parent::div");
+    },
+    get boxB() {
+        return ('#column-b');
+    },
+    get secondEl() {
+        return $("#columns div:nth-child(2) header");
+    },
+}

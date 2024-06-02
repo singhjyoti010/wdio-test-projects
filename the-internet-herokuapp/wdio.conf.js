@@ -1,3 +1,10 @@
+// import { join } from 'path';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 export const config = {
     //
     // ====================
@@ -129,7 +136,8 @@ export const config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 60000,
+        require: [join(__dirname, './helpers/setup.js')]
     },
 
     //
@@ -184,7 +192,13 @@ export const config = {
      * @param {Array.<String>} specs        List of spec file paths that are to be run
      * @param {object}         browser      instance of created browser/device session
      */
-    // before: function (capabilities, specs) {
+    // before: async function (capabilities, specs) {
+    //     await import('expect-webdriverio');
+    //     global.expect = global.expect;
+    //     global.assert = chai.assert;
+    //     global.should = chai.should();
+    //     const chai = await import('chai');
+    //     global.chaiExpect = chai.expect;
     // },
     /**
      * Runs before a WebdriverIO command gets executed.
